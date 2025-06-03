@@ -78,3 +78,35 @@ To learn more about React Native, take a look at the following resources:
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
 # react-native-window-base-set
+
+# base command && config react-native-window (date: 02062025)
+✅ Cách làm chuẩn để dùng React Native Windows:
+🧹 Bước 1: Xoá project bdsApp vừa tạo (nếu muốn làm gọn)
+bash
+Sao chép
+Chỉnh sửa
+cd ..
+rm -r bdsApp
+🏗 Bước 2: Tạo lại project với RN 0.72.9 (ổn định, tương thích tốt với RN Windows)
+bash
+Sao chép
+Chỉnh sửa
+npx @react-native-community/cli init bdsApp --version 0.72.9
+cd bdsApp
+🏁 Bước 3: Thêm React Native Windows
+bash
+Sao chép
+Chỉnh sửa
+npx react-native-windows-init --version 0.72.21 --overwrite
+📌 0.72.21 là version react-native-windows ổn định dành cho react-native@0.72.9.
+
+🚀 Bước 4: Build thử
+bash
+Sao chép
+Chỉnh sửa
+npx react-native run-windows
+🛠 Nếu ông vẫn muốn test bản RN 0.78.x:
+Phải clone thủ công repo React Native + React Native Windows, build từ source, rất tốn công, không nên nếu đang làm app thực chiến.
+
+Dùng bản nightly unstable => dễ lỗi, khó debug, ít tài liệu.
+
